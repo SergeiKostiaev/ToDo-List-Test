@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color:lavender;
+    color: white;
+    font-size: 12px;
+    font-family: 'Roboto';
+    margin: 0;
+}
+
+/*------Strat-----*/
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 1px solid purple;
+    color: purple;
+}
+
+.header {
+    width: 500px;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.add_message {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.text {
+    border: none;
+    background-color: none;
+    outline: none;
+    width: 350px;
+}
+.other_inputs {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.remove, .ready, .add_task {
+    padding: 5px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.remove:hover, .ready:hover, .add_task:hover {
+    color: purple;
+}
+/*-----main------*/
+main {
+    width: 500px;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.todos_wrapper {
+    display: flex;
+    padding: 10px 10px;
+    flex-direction: column;
+}
+.todo_item {
+    position: relative;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    background-color: purple;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+.description {
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+.buttons {
+    display: flex;
+    width: 185px;
+    justify-content: space-between;
+}
+.btn_complete, .btn_delete {
+    padding: 5px 16px;
+    background-color: white;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+.circle.checked {
+    border: 2px solid green;
+}
+/*--------STatus-------*/
+.circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: 2px solid red;
+    right: 10px;
+    top: 14px;
+}
+/*--------STatus end-------*/
+
+@keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.todo_item.delition {
+    animation: opacity 1s ease-in-out;
+}
+.description {
+    display: flex;
+    align-items: center;
+    color: floralwhite;
+}
